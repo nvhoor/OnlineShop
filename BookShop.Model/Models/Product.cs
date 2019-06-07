@@ -23,6 +23,7 @@ namespace BookShop.Model.Models
         public string Alias { get; set; }
         [Required]
         public int CategoryID { get; set; }
+        public virtual ProductCategory ProductCategory { get; set; }
         [MaxLength(500)]
         public string Image { get; set; }
         [MaxLength(500)]
@@ -31,11 +32,13 @@ namespace BookShop.Model.Models
         [Required]
         public decimal Price { get; set; }
         public decimal? PromotionPrice { get; set; }
+        [MaxLength(500)]
         public string Desciption { get; set; }
         public string Content { get; set; }
         public bool? HomeFlag { get; set; }
         public bool? HotFlag { get; set; }
         public int? ViewCount { get; set; }
        public virtual IEnumerable<ProductTag> ProductTags { get; set; }
+        public virtual IEnumerable<OrderDetail> OrderDetails { get; set; }
     }
 }

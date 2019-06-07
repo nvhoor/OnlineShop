@@ -13,8 +13,8 @@ namespace BookShop.Model.Models
         [Key]
         public int TagID { get; set; }
         [ForeignKey("PostID")]
-        public virtual Post Posts { get; set; }
+        public virtual Post Post { get; set; }
         [ForeignKey("TagID")]
-        public virtual Tag Tags { get; set; }
+        public virtual Tag Tag { get; set; }
     }
 }

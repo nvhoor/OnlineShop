@@ -8,17 +8,19 @@ using System.Threading.Tasks;
 
 namespace BookShop.Model.Models
 {
-    [Table("ProductTags")]
-  public  class ProductTag
+    [Table("OrderDetails")]
+   public class OrderDetail
     {
         [Key]
-        public int ProductID { get; set; }
+     
+        public int OrderID { get; set; }
         [Key]
-        public int TagID { get; set; }
-        [ForeignKey("TagID")]
-        public virtual Tag Tag { get; set; }
+        public int ProductID { get; set; }
+        [Required]
+        public int Quantity { get; set; }
+        [ForeignKey("OrderID")]
+        public virtual Order Oder { get; set; }
         [ForeignKey("ProductID")]
         public virtual Product Product { get; set; }
-
     }
 }
