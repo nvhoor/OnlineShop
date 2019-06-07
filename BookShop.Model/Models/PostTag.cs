@@ -10,7 +10,7 @@ namespace BookShop.Model.Models
     {
         [Key]
         public int PostID { get; set; }
-        [Key]
+        [Key,MaxLength(50), Column(TypeName = "VARCHAR")]
         public int TagID { get; set; }
         [ForeignKey("PostID")]
         public virtual Post Post { get; set; }

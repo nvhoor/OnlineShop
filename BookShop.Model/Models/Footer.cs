@@ -7,8 +7,8 @@ namespace BookShop.Model.Models
   public  class Footer
     {
         [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int ID { set; get; }
+        [MaxLength(50),Column(TypeName ="VARCHAR")]
+        public string ID { set; get; }
         public string Content { get; set; }
     }
 }

@@ -13,8 +13,8 @@ namespace BookShop.Model.Models
     {
         [Key]
         public int ProductID { get; set; }
-        [Key]
-        public int TagID { get; set; }
+        [Key,MaxLength(50),Column(TypeName ="VARCHAR")]
+        public string TagID { get; set; }
         [ForeignKey("TagID")]
         public virtual Tag Tag { get; set; }
         [ForeignKey("ProductID")]

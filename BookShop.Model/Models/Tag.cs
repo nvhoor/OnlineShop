@@ -12,8 +12,8 @@ namespace BookShop.Model.Models
    public class Tag
     {
         [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int ID { get; set; }
+        [MaxLength(50),Column(TypeName ="VARCHAR")]
+        public string ID { get; set; }
         [Required]
         [MaxLength(50)]
         public string Name { set; get; }
