@@ -17,7 +17,7 @@ namespace BookShop.Model.Models
         [Required]
         [MaxLength(50)]
         public string Name { set; get; }
-        [MaxLength(50)]
+        [MaxLength(50), Column(TypeName = "VARCHAR")]
         public string Type { get; set; }
         public virtual IEnumerable<PostTag> PostTags { get; set; }
         public virtual IEnumerable<ProductTag> ProductTags { get; set;}

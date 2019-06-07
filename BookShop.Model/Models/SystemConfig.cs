@@ -9,7 +9,7 @@ namespace BookShop.Model.Models
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int ID { get; set; }
-        [MaxLength(50)]
+        [MaxLength(50), Column(TypeName = "VARCHAR")]
         public string Code { get; set; }
         [MaxLength(250)]
         public string ValueString { get; set; }

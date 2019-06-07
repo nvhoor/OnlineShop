@@ -69,10 +69,6 @@
       <Project>{ca8c289b-674d-4ae7-bf97-23795f3a0316}</Project>
       <Name>BookShop.Service</Name>
     </ProjectReference>
-    <ProjectReference Include="..\BookShop.Web\BookShop.Web.csproj">
-      <Project>{70ac9a56-71e2-40c6-8ee9-64e2c06f806d}</Project>
-      <Name>BookShop.Web</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />

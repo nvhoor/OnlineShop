@@ -13,7 +13,7 @@ namespace BookShop.Model.Models
         [Required]
         public DateTime VistedDate { get; set; }
         [Required]
-        [MaxLength(50)]
+        [MaxLength(50), Column(TypeName = "VARCHAR")]
         public string IPAdress { get; set; } 
     }
 }

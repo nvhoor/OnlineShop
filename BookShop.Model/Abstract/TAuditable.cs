@@ -1,11 +1,12 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace BookShop.Model.Models
 {
   public abstract  class TAuditable : IAuditable
     {
-        [MaxLength(50)]
+        [MaxLength(50), Column(TypeName = "VARCHAR")]
         public DateTime CreatedBy
         {
             get;
@@ -47,7 +48,7 @@ namespace BookShop.Model.Models
             set
            ;
         }
-        [MaxLength(50)]
+        [MaxLength(50), Column(TypeName = "VARCHAR")]
         public DateTime? UpdatedBy
         {
             get

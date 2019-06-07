@@ -19,7 +19,7 @@ namespace BookShop.Model.Models
         public int GroupID { get; set; }
         [ForeignKey("GroupID")]
         public virtual MenuGroup MenuGroup { get; set; }
-        [MaxLength(10)]
+        [MaxLength(10),Column(TypeName ="VARCHAR")]
         public string Target { get; set; }
         public bool Status { get; set; }
     }

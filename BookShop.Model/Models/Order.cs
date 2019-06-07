@@ -24,12 +24,12 @@ namespace BookShop.Model.Models
         [MaxLength(250)]
         public string CustomerEmail { get; set; }
         [Required]
-        [MaxLength(50)]
+        [MaxLength(50),Column(TypeName ="VARCHAR")]
         public string CustomerMobile { get; set; }
         [MaxLength(250)]
         public string CustomerMessage { get; set; }
         public DateTime CreatedDate { get; set; }
-        [MaxLength(50)]
+        [MaxLength(50), Column(TypeName = "VARCHAR")]
         public string CreatedBy { get; set; }
         [MaxLength(250)]
         public string PaymentMethod { get; set; }
