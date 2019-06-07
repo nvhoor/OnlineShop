@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace BookShop.Model.Models
 {
-    class TAuditable : IAuditable
+  public abstract  class TAuditable : IAuditable
     {
         [MaxLength(50)]
         public DateTime CreatedBy
