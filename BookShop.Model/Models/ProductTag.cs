@@ -11,9 +11,9 @@ namespace BookShop.Model.Models
     [Table("ProductTags")]
   public  class ProductTag
     {
-        [Key]
+        [Key,Column(Order =1)]
         public int ProductID { get; set; }
-        [Key,MaxLength(50),Column(TypeName ="VARCHAR")]
+        [Key,MaxLength(50),Column(TypeName ="VARCHAR",Order =2)]
         public string TagID { get; set; }
         [ForeignKey("TagID")]
         public virtual Tag Tag { get; set; }

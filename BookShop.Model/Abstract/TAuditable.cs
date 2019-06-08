@@ -6,8 +6,9 @@ namespace BookShop.Model.Models
 {
   public abstract  class TAuditable : IAuditable
     {
+
         [MaxLength(50), Column(TypeName = "VARCHAR")]
-        public DateTime CreatedBy
+        public string CreatedBy
         {
             get;
 
@@ -49,7 +50,7 @@ namespace BookShop.Model.Models
            ;
         }
         [MaxLength(50), Column(TypeName = "VARCHAR")]
-        public DateTime? UpdatedBy
+        public string UpdatedBy
         {
             get
            ;

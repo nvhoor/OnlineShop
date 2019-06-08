@@ -23,11 +23,15 @@ namespace BookShop.Model.Models
         public string Alias { get; set; }
         [Required]
         public int CategoryID { get; set; }
+        [ForeignKey("CategoryID")]
         public virtual ProductCategory ProductCategory { get; set; }
+        public int PublisherID { get; set; }
+        [ForeignKey("PublisherID")]
+        public virtual Publisher Publisher { get; set; }
         [MaxLength(500)]
         public string Image { get; set; }
-        [MaxLength(500)]
-        public XElement MoreImage { get; set; }
+        [Column(TypeName ="xml")]
+        public string MoreImages { get; set; }
         public int? PageNumber { get; set; }
         [Required]
         public decimal Price { get; set; }
@@ -40,5 +44,6 @@ namespace BookShop.Model.Models
         public int? ViewCount { get; set; }
        public virtual IEnumerable<ProductTag> ProductTags { get; set; }
         public virtual IEnumerable<OrderDetail> OrderDetails { get; set; }
+        public virtual IEnumerable<ProductAuthor> ProductAuthors { get; set; }
     }
 }

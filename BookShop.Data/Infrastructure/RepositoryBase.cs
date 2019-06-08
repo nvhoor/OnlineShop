@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace BookShop.Data.Infrastructure
 {
-  public abstract class RepositoryBase<T> where T :class
+  public abstract class RepositoryBase<T> : IRepository<T> where T :class
     {
         #region Properties
         private BookShopDbContext dbContext;
@@ -44,7 +44,7 @@ namespace BookShop.Data.Infrastructure
 
         public virtual T Delete(T entity)
         {
-            return dbSet.Remove(entity);
+           return  dbSet.Remove(entity);
         }
         public virtual T Delete(int id)
         {
@@ -58,7 +58,7 @@ namespace BookShop.Data.Infrastructure
                 dbSet.Remove(obj);
         }
 
-        public virtual T GetSingleById(int id)
+        public virtual T GetSingleByID(int id)
         {
             return dbSet.Find(id);
         }

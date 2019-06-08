@@ -8,8 +8,8 @@ namespace BookShop.Model.Models
         string MetalDescription { get; set; }
         DateTime CreatedDate { get; set; }
         DateTime? UpdatedDate { get; set; }
-        DateTime CreatedBy { get; set; }
-        DateTime? UpdatedBy { get; set; }
+        string CreatedBy { get; set; }
+        string UpdatedBy { get; set; }
         bool Status { get; set; }
     }
 }

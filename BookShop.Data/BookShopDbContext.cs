@@ -10,7 +10,7 @@ namespace BookShop.Data
 {
    public class BookShopDbContext:DbContext
     {
-        public BookShopDbContext() : base("Connect")
+        public BookShopDbContext() : base("name=Connect")
         {
             this.Configuration.LazyLoadingEnabled = false;
         }
@@ -21,7 +21,9 @@ namespace BookShop.Data
         public DbSet<OrderDetail> OrderDetails { get; set; }
         public DbSet<Page> Pages { get; set; }
         public DbSet<PostCategory> PostCategories { get; set; }
-
+        public DbSet<Publisher> Publishers { get; set; }
+        public DbSet<ProductAuthor> ProductAuthors { get; set; }
+        public DbSet<Author> Authors { get; set; }
         public DbSet<PostTag> PostTags { get; set; }
         public DbSet<Product> Products { get; set; }
         public DbSet<ProductCategory> ProductCategories { get; set; }
