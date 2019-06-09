@@ -7,7 +7,7 @@ using System.Linq;
 
 namespace BookShop.Data.Responsitories
 {
-    public interface IProductCategoryRepository
+    public interface IProductCategoryRepository:IRepository<ProductCategory>
     {
         IEnumerable<ProductCategory> GetByAlias(string alias);
     }

@@ -8,13 +8,13 @@ using System.Threading.Tasks;
 
 namespace BookShop.Data.Responsitories
 {
-    public interface IProductRepository:IRepository<Product>
+    public interface IPublisherRepository:IRepository<Publisher>
     {
 
     }
-    public class ProductRepository : RepositoryBase<Product>,IProductRepository
+    public class PublisherRepository : RepositoryBase<Publisher>, IPublisherRepository
     {
-        public ProductRepository(IDbFactory dbFactory) : base(dbFactory)
+        public PublisherRepository(IDbFactory dbFactory) : base(dbFactory)
         {
         }
     }
