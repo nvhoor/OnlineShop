@@ -20,6 +20,7 @@ namespace BookShop.Data
         public DbSet<Order> Orders { get; set; }
         public DbSet<OrderDetail> OrderDetails { get; set; }
         public DbSet<Page> Pages { get; set; }
+        public DbSet<Post> Posts { get; set; }
         public DbSet<PostCategory> PostCategories { get; set; }
         public DbSet<Publisher> Publishers { get; set; }
         public DbSet<ProductAuthor> ProductAuthors { get; set; }

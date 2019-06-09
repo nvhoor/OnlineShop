@@ -9,10 +9,10 @@ namespace BookShop.Data.Infrastructure
 {
   public  interface IRepository<T> where T:class
     {
-       void Add(T entity);
+       T Add(T entity);
         void Update(T entity);
-        void Delete(T entity);
-        void Delete(int id);
+        T Delete(T entity);
+        T Delete(int id);
         void DeleteMulti(Expression<Func<T, bool>> where);
         T GetSingleByID(int ID);
         T GetSingleByCondition(Expression<Func<T, bool>> expresssion, string[] includes = null);

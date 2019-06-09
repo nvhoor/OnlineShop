@@ -37,7 +37,7 @@ namespace BookShop.Model.Models
         public decimal Price { get; set; }
         public decimal? PromotionPrice { get; set; }
         [MaxLength(500)]
-        public string Desciption { get; set; }
+        public string Description { get; set; }
         public string Content { get; set; }
         public bool? HomeFlag { get; set; }
         public bool? HotFlag { get; set; }

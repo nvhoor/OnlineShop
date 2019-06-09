@@ -21,7 +21,7 @@ namespace BookShop.Model.Models
         [MaxLength(250), Column(TypeName = "VARCHAR")]
         public string Alias { get; set; }
         [MaxLength(500)]
-        public string Desciption { get; set; }
+        public string Description { get; set; }
         public int? ParentID { get; set; }
         public int? DisplayOrder { get; set; }
         [MaxLength(500)]

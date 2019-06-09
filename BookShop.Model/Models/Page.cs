@@ -16,11 +16,15 @@ namespace BookShop.Model.Models
         public int ID { get; set; }
         [MaxLength(250)]
         public string Name { get; set; }
+        [Required]
+        [MaxLength(250), Column(TypeName = "VARCHAR")]
+        public string Alias { get; set; }
         public string Content { get; set; }
         [MaxLength(250)]
         public string MetalKeyword { get; set; }
         [MaxLength(250)]
         public string MetalDescription { get; set; }
+       
         public bool Status { get; set; }
 
     }
